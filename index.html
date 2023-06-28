@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title> FORM MAHASISWA </title>
+</head>
+<!-- dan untuk form pendaftaran mahasiswa ini sendiri sudah bisa validation dari sisi  client atau client side -->
+
+<!--berisikan form terkait nama lengkap,email,password,tempat lahir,tanggal lahir dan beberapa div lainnya yang sudah terdapat di bawah ini -->
+
+<body>
+    <!--berisikan judul yaitu tentang form pendaftaran mahasiswa baru-->
+    <!-- menggunkan div dengan class container yang di dalamnya menggunakan typography yaitu h2/atau heaading-->
+    <div class="container">
+        <h2 class="alert alert-primary text-center mt-3">FORM PENDAFTARAN MAHASISWA BARU</h2>
+    </div>
+
+    <!--awal form-->
+    <!--membuat form di dalam body -->
+    <form>
+        <!-- dan di dalam form kita akan membuat div baru sesuai dengan yang dibutuhkan yaitu ada div container dengan label nama lengkap-->
+        <div class="container">
+            <div class="form-group  ">
+                <label for="NamaLengkap">Nama Lengkap</label>
+                <input type="text" name="" class="form-control" placeholder="masukkan nama lengkap" id="NamaLengkap">
+            </div>
+
+            <!-- dan di dalam form kita akan membuat div baru sesuai dengan yang dibutuhkan yaitu ada div container dengan label Email-->
+            <div class="form-group  ">
+                <label for="email">Email</label>
+                <input type="email" name="" class="form-control" placeholder="masukkan email anda" id="email">
+            </div>
+            <!-- dan di dalam form kita akan membuat div baru sesuai dengan yang dibutuhkan yaitu ada div container dengan label Password-->
+            <div class="form-group  ">
+                <label for="password">Password</label>
+                <input type="password" name="" class="form-control" placeholder="masukkan password anda" id="password">
+                <small> password harus terdiri dari angka dan huruf dan minimal 6 karakter</small>
+            </div>
+
+            <!-- dan di dalam form kita akan membuat div baru sesuai dengan yang dibutuhkan yaitu ada div container dengan labelTempat Lahir-->
+            <!--dan pada bagian Tempat lahir dan juga Tanggal  Lahir di berikan class dengan nama col dengan md/medium 6 
+                sehinga antartanggal lahir dan tempat lahir akan menempati sisi kanan dan kiri dengan masing-masing nilai 6 karena jumlah medium 12 maka dibagi 2 menjadi 6-->
+
+            <div class="row ">
+                <div class="col-md-6 ">
+                    <div class="form-group ">
+                        <label for="TempatLahir">Tempat Lahir</label>
+                        <input type="text " name=" " class="form-control " placeholder="masukkan Tempat Lahir" id="TempatLahir">
+                    </div>
+
+                    <!-- dan di dalam form kita akan membuat div baru sesuai dengan yang dibutuhkan yaitu ada div container dengan label Tanggal Lahir-->
+                </div>
+                <div class="col-md-6 ">
+                    <div class="form-group ">
+                        <label for="Tanggal Lahir">Tanggal Lahir</label>
+                        <input type="date" name=" " class="form-control " placeholder="masukkan Tanggal Lahir" id="Tanggal Lahir">
+                    </div>
+                </div>
+                <!-- dan pada bagian pilih jurusan ini di buatkan div class dengan form-group yang di berikan label 
+                    Pilih jurusan sehingga user ketika menjalannkan website bisa melakukan input jurusan sesuai keinginan-->
+            </div>
+            <div class="form-group">
+                <label> Pilih Jurusan </label>
+
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option selected>Silahkan Memilih Jurusan Anda</option>
+                    <option value="1">Informatika</option>
+                    <option value="2">Manajemen Informatika</option>
+                    <option value="3">Teknik Komputer</option>
+                    <option value="4">Manajemen Ritel</option>
+                    <option value="5">Sistem Informasi</option>
+                </select>
+            </div>
+            <!-- dan pada bagian alasan memilih universitas di berikan label dan juga textarea yang dimana user bisa menuliskan alasannya
+                 dalam textarea tersebut dan untuk hasil dapat di lihat ketika browser dijalankan-->
+            <div class="form-group">
+                <label>Alasan memilih Universitas ABCD</label>
+                <textarea class="form-control" rows="5"></textarea>
+            </div>
+            <!--pada bagian jenis kelamin antara laki-laki dan juga perempuan menggunakan type radio yaitu user tinggal mengklik 
+                pada salah satu opsi jenis kelamin yang sudah tersedia antara laki-laki dan perempuan -->
+            <div class="form-group">
+                <label>Jenis kelamin</label><br>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="radio1" id="radio2" checked="">
+                    <label>Laki-laki</label>
+                </div>
+            </div>
+
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="radio1" id="" radio2>
+                <label>Perempuan</label>
+            </div>
+
+            <!-- pada bagian upload dokumen menggunakan type file dan class form-control-file yakni user bisa melakukan upload file baik itu gambar atau dokumen dan maksimal ukuran file 2mb-->
+            <div class="form-group">
+                <label>upload dokumen</label>
+                <input type="file" class="form-control-file" name="">
+                <small>Upload file ukuran maksimal 2mb</small>
+            </div>
+
+            <!-- pada bgian terakhir ini yaitu save dan reset data yakni user bisa melanjutkan untuk menyimpan data atau mengirim data yang sudah di isi jika sudah di rasa benar.
+            pada bagian ini menggunakan  button dengan type sumbit dengan class btn-->
+
+            <!--sedangkan pada bagian reset user bisa melakukan reset pada semua data yang sudah di isi pada form jika di rasa data yang di masukkan salah secara keseluruhan .
+            pada bagian ini menggunakan  button dengan type reset dengan class btn-->
+
+            <button type="submit" class="btn btn-primary"> SIMPAN</button>
+            <button type="reset" class="btn btn-danger">RESET</button>
+
+        </div>
+    </form>
+    <!--akhir dari form-->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct " crossorigin="anonymous "></script>
+</body>
+
+</html>
